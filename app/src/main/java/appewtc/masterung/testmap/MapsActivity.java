@@ -13,13 +13,25 @@ public class MapsActivity extends FragmentActivity {
 
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
     private double douLatEWTC = 13.667646, doulngEWTC = 100.621740;
+    private LatLng objLatLngBangna14, objLatLngBTS;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
+
+        //Setup LatLng
+        setupLatLng();
+
         setUpMapIfNeeded();
     }   // onCreate
+
+    private void setupLatLng() {
+
+        objLatLngBangna14 = new LatLng(13.669442, 100.623291);
+        objLatLngBTS = new LatLng(13.668212, 100.605009);
+
+    }   // setupLatLng
 
     @Override
     protected void onResume() {
@@ -67,5 +79,10 @@ public class MapsActivity extends FragmentActivity {
      */
     private void setUpMap() {
         mMap.addMarker(new MarkerOptions().position(new LatLng(douLatEWTC, doulngEWTC)).title("สถาบัน EWTC").snippet("อบรมแอนดรอยด์ กับ มาสเตอร์ อึ่ง"));
-    }
-}
+
+        // for Bangna14
+        mMap.addMarker(new MarkerOptions().position(objLatLngBangna14).title("ซอย บางนา-ตราด 14").snippet("จะเห็นป้ายหมู่บ้านถาวรนิเวศน์"));
+
+    }   // setUpMap
+
+}   // Main Class
