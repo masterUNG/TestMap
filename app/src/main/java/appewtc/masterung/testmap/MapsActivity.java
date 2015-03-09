@@ -62,7 +62,7 @@ public class MapsActivity extends FragmentActivity {
                     .getMap();
 
             //Move Camera to EWTC
-            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(douLatEWTC, doulngEWTC), 17));
+            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(douLatEWTC, doulngEWTC), 16));
 
             // Check if we were successful in obtaining the map.
             if (mMap != null) {
@@ -82,6 +82,9 @@ public class MapsActivity extends FragmentActivity {
 
         // for Bangna14
         mMap.addMarker(new MarkerOptions().position(objLatLngBangna14).title("ซอย บางนา-ตราด 14").snippet("จะเห็นป้ายหมู่บ้านถาวรนิเวศน์"));
+
+        // for BTS
+        mMap.addMarker(new MarkerOptions().position(objLatLngBTS).title("BTS").snippet("กรมอุตุ"));
 
     }   // setUpMap
 
