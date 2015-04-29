@@ -90,7 +90,7 @@ public class MapsActivity extends FragmentActivity {
 
         objLatLngBangna14 = new LatLng(13.669442, 100.623291);
         objLatLngBTS = new LatLng(13.668212, 100.605009);
-        objLatLngMobile = new LatLng(douLatMobile, douLngMobile);
+      //  objLatLngMobile = new LatLng(douLatMobile, douLngMobile);
 
 
     }   // setupLatLng
@@ -162,7 +162,7 @@ public class MapsActivity extends FragmentActivity {
                     .getMap();
 
             //Move Camera to EWTC
-            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(douLatEWTC, doulngEWTC), 15));
+            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(objLatLngBangna14, 15));
             //mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(douLatMobile, douLngMobile), 15));
 
             // Check if we were successful in obtaining the map.
@@ -187,7 +187,7 @@ public class MapsActivity extends FragmentActivity {
         // for BTS
         mMap.addMarker(new MarkerOptions().position(objLatLngBTS).title("BTS").snippet("กรมอุตุ"));
 
-        mMap.addMarker(new MarkerOptions().position(objLatLngMobile).title("Mobile"));
+      //  mMap.addMarker(new MarkerOptions().position(objLatLngMobile).title("Mobile"));
 
     }   // setUpMap
 
